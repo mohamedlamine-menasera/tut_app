@@ -14,14 +14,13 @@ ThemeData getApplicationTheme() {
 
     // disabledColor :The fill color of the button when the button is disabled "before click it"
     disabledColor: AppColor.grey,
-    // splashColor => ripple effect : Color display when u click on the button
+    // splashColor => ripple effect : Color display when you click on the button
     splashColor: AppColor.lightPrimary,
 
     // CardView Theme
     cardTheme: const CardTheme(
       color: AppColor.white,
       shadowColor: AppColor.grey,
-
       // This property controls the size of the shadow below the app bar if shadowColor is not null.
       elevation: AppSize.s4,
     ),
