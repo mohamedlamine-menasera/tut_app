@@ -30,9 +30,9 @@ ThemeData getApplicationTheme() {
       centerTitle: true,
       color: AppColor.primary,
       elevation: AppSize.s4,
-      titleTextStyle: getSemiBoldStyle(
-          fontSize: FontSize.s16, color: AppColor.white),
-        ),
+      titleTextStyle:
+          getSemiBoldStyle(fontSize: FontSize.s16, color: AppColor.white),
+    ),
 
     // Button theme
     buttonTheme: const ButtonThemeData(
@@ -47,7 +47,10 @@ ThemeData getApplicationTheme() {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
           textStyle:
-              getRegularStyle(color: AppColor.white, fontSize: FontSize.s17)),
+              getRegularStyle(color: AppColor.white, fontSize: FontSize.s17),
+          backgroundColor: AppColor.primary,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(AppSize.s12))),
     ),
 
     // Text Theme
@@ -71,16 +74,16 @@ ThemeData getApplicationTheme() {
     // overline     10.0  regular  1.5
 
     textTheme: TextTheme(
+      titleMedium:
+          getMediumStyle(color: AppColor.lightGrey, fontSize: FontSize.s16),
       displayLarge:
           getSemiBoldStyle(color: AppColor.darkGrey, fontSize: FontSize.s16),
+      displayMedium:
+          getMediumStyle(color: AppColor.darkGrey, fontSize: FontSize.s16),
       headlineLarge:
           getBoldStyle(color: AppColor.primary, fontSize: FontSize.s18),
       headlineMedium:
           getRegularStyle(color: AppColor.darkGrey, fontSize: FontSize.s14),
-      displayMedium:
-          getMediumStyle(color: AppColor.darkGrey, fontSize: FontSize.s16),
-      titleMedium:
-          getMediumStyle(color: AppColor.lightGrey, fontSize: FontSize.s16),
       bodyLarge: getRegularStyle(color: AppColor.grey1),
       bodySmall: getRegularStyle(color: AppColor.grey),
     ),
@@ -89,13 +92,14 @@ ThemeData getApplicationTheme() {
     inputDecorationTheme: InputDecorationTheme(
       // Content padding
       contentPadding: const EdgeInsets.all(AppPadding.p8),
+
       // Hint style
       hintStyle:
           getRegularStyle(color: AppColor.darkGrey, fontSize: FontSize.s14),
       labelStyle: getMediumStyle(color: AppColor.grey, fontSize: FontSize.s14),
       errorStyle: getRegularStyle(color: AppColor.error),
 
-      // Enabled border style
+      // Enabled border style "when the input is enable"
       enabledBorder: const OutlineInputBorder(
           borderSide:
               BorderSide(color: AppColor.primary, width: AppBorder.b1_5),

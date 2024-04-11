@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:tut_app/presentation/resources/theme_manager.dart';
 
+import '../presentation/resources/routes_manager.dart';
+
 class MyApp extends StatefulWidget {
 
   // Named constructor used to create an instance of MyApp. This constructor is marked as private (_internal), meaning it cannot be accessed outside the class.
