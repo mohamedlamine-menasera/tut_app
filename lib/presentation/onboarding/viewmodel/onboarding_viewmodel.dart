@@ -1,8 +1,6 @@
 import 'dart:async';
 import 'dart:developer';
 
-import 'package:iblog/domain/models/models.dart';
-import 'package:iblog/presentation/data/baseviewmodel.dart';
 
 import '../../resources/assets_manager.dart';
 import '../../resources/strings_manager.dart';

@@ -1,9 +1,14 @@
-import 'dart:developer';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:tut_app/domain/models/models.dart';
+import 'package:tut_app/presentation/resources/colors_manager.dart';
+import 'package:tut_app/presentation/resources/strings_manager.dart';
+import 'package:tut_app/presentation/resources/values_manager.dart';
 
 
+import '../../resources/constants_manager.dart';
+import '../../resources/routes_manager.dart';
 import '../viewmodel/onboarding_viewmodel.dart';
 
 class OnBoardingView extends StatefulWidget {
@@ -43,14 +48,14 @@ class _OnBoardingViewState extends State<OnBoardingView> {
       return Container();
     } else {
       return Scaffold(
-        backgroundColor: ColorManager.white,
+        backgroundColor: AppColor.white,
         appBar: AppBar(
           // this for up system-bar "WIFI,Network,Time.."
           systemOverlayStyle: const SystemUiOverlayStyle(
-            statusBarColor: ColorManager.white, // For the bar
+            statusBarColor: AppColor.white, // For the bar
             statusBarBrightness: Brightness.dark, // for the icons
           ),
-          backgroundColor: ColorManager.white,
+          backgroundColor: AppColor.white,
           elevation: AppSize.s0,
         ),
         body: PageView.builder(
@@ -66,7 +71,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
           },
         ),
         bottomSheet: Container(
-          color: ColorManager.white,
+          color: AppColor.white,
           child: Column(
               mainAxisSize: MainAxisSize.min,
               // take the size of the sidebar only
@@ -93,7 +98,7 @@ class _OnBoardingViewState extends State<OnBoardingView> {
 
   Widget _getBottomSheetWidget(SliderViewObject sliderViewObject) {
     return Container(
-      color: ColorManager.darkPrimary,
+      color: AppColor.darkPrimary,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
